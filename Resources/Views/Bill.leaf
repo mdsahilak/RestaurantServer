@@ -1,0 +1,45 @@
+
+<html style="height: 100%">
+    <head>
+        <title> Bill </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="/styles/app.css">
+                </head>
+    <div class="container" style="color:black">
+        <body style="background: #FF8768">
+            <h1 class="text-center pt-3 pb-1">Bill</h1>
+            <h2 class="text-center pb-3"> Ordered by: #(bill.orderingEntity) </h2>
+            <h3 class="text-center pb-3"> Order ID: #(bill.id) </h3>
+            
+            #for(item in bill.orderedMenuItems) {
+            <ul class="list-group list-group-horizontal pb-1">
+                <li class="list-group-item flex-fill bg-dark text-white">
+                    <h3 class="text-left">(ItemID: #(item.id)) #(item.name)</h3>
+                </li>
+                <li class="list-group-item">
+                    <h3>$ #(item.price)</h3>
+                </li>
+            </ul>
+            
+            }
+            
+            <div class="pt-3 pb-3">
+            <ul class="list-group list-group-horizontal pb-1">
+                <li class="list-group-item flex-fill bg-dark text-white">
+                    <h3 class="text-left">Total Bill Amount:</h3>
+                </li>
+                <li class="list-group-item">
+                    <h2>$ #(bill.totalBillAmount)</h2>
+                </li>
+            </ul>
+            </div>
+            
+            <div class="p-3"align="center">
+            <button class="btn btn-outline-dark btn-lg" align="center" onclick="window.location.href = '/billing';">
+                Done
+            </button>
+            </div>
+            
+        </body>
+    </div>
+</html>

@@ -1,0 +1,33 @@
+
+<html style="height: 100%">
+    <head>
+        <title> Restaurant Server </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="/styles/app.css">
+    </head>
+    <div class="container" style="color:black">
+        <body style="background: #FF8768">
+            <h1 class="text-center pt-2 pb-0" >Restaurant Server</h1>
+            <div align="center">
+            <button class="btn btn-outline-light" onclick="window.location.href = '/kitchen';"> Kitchen </button>
+            <button class="btn btn-outline-light" onclick="window.location.href = '/billing';"> Billing </button>
+            </div>
+            <p align="center" class="pt-1">
+            <img src="https://imgur.com/2nXdmrm.png" alt="X" style="width:500px;height:500px">
+                </p>
+            
+            <h3 align="center">
+                ...Restaurant Server Running...
+            </h3>
+            
+            <p class="text-center p-0">
+             To load sample menu items, send a POST request to http://localhost:8080/init
+            <br>
+            
+             i.e, run the following command in your Terminal: "curl -X POST http://localhost:8080/init".
+            
+            </p>
+            
+        </body>
+    </div>
+</html>

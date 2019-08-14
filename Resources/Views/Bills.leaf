@@ -1,0 +1,41 @@
+
+<html style="height: 100%" >
+    <head>
+        <title> Restaurant Billing Counter </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            </head>
+    <div class="container" >
+        <body style="background: #FF8768">
+            <h1 align="center"> Billing Counter </h1>
+            
+            <div align="center" class="pb-3">
+                <button class="btn btn-outline-dark" onclick="window.location.href = '/billing/reload';">Check for new bills</button>
+            </div>
+            
+            <table class="table" >
+                <tbody>
+                    #for(bill in bills){
+                    <tr>
+                        <td>
+                            
+                            <p class="text-left pt-3 pl-3">#(bill.dateString)</p>
+                            <p class="text-left pt-0 pl-3">Order ID: #(bill.id)</p>
+                            <ul class="list-group list-group-horizontal pb-1">
+                                <li class="list-group-item flex-fill">
+                                    <h3 class="text-left">Order for #(bill.orderingEntity)</h3>
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <button class="btn btn-outline-light" onclick="window.location.href = '/billing/#(bill.id)';">
+                                        Detail
+                                    </button>
+                                </li>
+                            </ul>
+                            
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </body>
+    </div>
+</html>

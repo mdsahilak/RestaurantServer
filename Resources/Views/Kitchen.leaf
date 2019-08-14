@@ -1,0 +1,36 @@
+
+<html style="height: 100%">
+    <head>
+        <title> Restaurant Kitchen</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="/styles/app.css">
+                </head>
+    <div class="container" style="color:black">
+        <body style="background: #FF8768">
+            <h1 class="text-center pt-3 pb-1">Kitchen</h1>
+            
+            <div align="center" class="pb-2">
+                <button class="btn btn-outline-dark" onclick="window.location.href = '/kitchen/reload';">Check for new orders</button>
+            </div>
+            <h2 class="text-center"> Recieved Orders: </h2>
+            
+            #for(serverOrder in serverOrders) {
+            <p class="text-center pt-3">#(serverOrder.dateString)<br>Order ID: #(serverOrder.id)</p>
+            <ul class="list-group list-group-horizontal pb-1">
+                <li class="list-group-item flex-fill">
+                    <h3 class="text-left">Order for #(serverOrder.orderingEntity)</h3>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-outline-success" onclick="window.location.href = '/kitchen/delete/#(serverOrder.id)';"> Served </button>
+                </li>
+            </ul>
+            
+                #for(item in serverOrder.orderedMenuItems) {
+                <p class="form-control bg-dark text-white" align="center"> ItemID: #(item.id) - #(item.name) - #(item.preparationTime) minutes</p>
+                }
+                
+            }
+            
+        </body>
+    </div>
+</html>
