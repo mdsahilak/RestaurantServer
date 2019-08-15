@@ -1,8 +1,8 @@
 
 # Restaurant Server
-
+---
 ## A Vapor swift backend server for the Ordering, Kitchen, Billing and Advertising aspects of a restaurant.
-
+---
 ### Address: http://localhost:8080/
 - - - -
 **Setting Up and Using the Server**:
