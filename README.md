@@ -13,3 +13,5 @@
 5. You can now use the iOS app to order the loaded items.
 6. After ordering, the kitchen route will show the orders sent to the kitchen. On serving the order, press the ’served’ button.
 7. Now the served orders will be present in the bills route. This part is for the billing counter, where the customer can pay the bill. 
+
+Thank you
