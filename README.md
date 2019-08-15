@@ -1,29 +1,15 @@
+
 # Restaurant Server
 
 ## A Vapor swift backend server for the Ordering, Kitchen, Billing and Advertising aspects of a restaurant.
 
-<br>
-
-
-Using: 
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/1342803/36623515-7293b4ec-18d3-11e8-85ab-4e2f8fb38fbd.png" width="320" alt="API Template">
-    <br>
-    <br>
-    <a href="http://docs.vapor.codes/3.0/">
-        <img src="http://img.shields.io/badge/read_the-docs-2196f3.svg" alt="Documentation">
-    </a>
-    <a href="https://discord.gg/vapor">
-        <img src="https://img.shields.io/discord/431917998102675485.svg" alt="Team Chat">
-    </a>
-    <a href="LICENSE">
-        <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
-    </a>
-    <a href="https://circleci.com/gh/vapor/api-template">
-        <img src="https://circleci.com/gh/vapor/api-template.svg?style=shield" alt="Continuous Integration">
-    </a>
-    <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
-    </a>
-</p>
+### Address: http://localhost:8080/
+- - - -
+**Setting Up and Using the Server**:
+1. Run the Xcode Project (make sure Run scheme and mac is selected as your device).
+2. Visit http://localhost:8080/ on your browser. This is the home page of the server. If you visit the billing or kitchen links on the website, it will be blank as no orders have been sent, yet.
+3. Also, there are no menu items on the servers menu. You could add custom menu items using the RestaurantAdmin mac app. For now, let’s just load a few preset items. Go to your terminal and type the following command and press enter -> curl -X POST http://localhost:8080/init.
+4. It show a response stating that sample items have been initialised.
+5. You can now use the iOS app to order the loaded items.
+6. After ordering, the kitchen route will show the orders sent to the kitchen. On serving the order, press the ’served’ button.
+7. Now the served orders will be present in the bills route. This part is for the billing counter, where the customer can pay the bill. 
